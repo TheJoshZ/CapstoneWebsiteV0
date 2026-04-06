@@ -131,7 +131,7 @@ export default function App() {
             </div>
             <div className="hero-right">
               <div className="hero-img-container">
-                <img src="/image.jpg" alt="Joshua Zhu" className="hero-img" referrerPolicy="no-referrer" />
+                <img src="image.jpg" alt="Joshua Zhu" className="hero-img" referrerPolicy="no-referrer" />
               </div>
               <div className="figure-caption">Figure 1 — Joshua Zhu with the Horten IV flying wing.</div>
             </div>
@@ -216,7 +216,7 @@ export default function App() {
             </div>
             <div className="bio-col" style={{background:'var(--parchment)',display:'flex',flexDirection:'column',alignItems:'center', padding: '2rem'}}>
               <div className="photo-box" style={{background: 'none', width: 'auto', border: 'none'}}>
-                <img src="/IMG_2756.jpg" alt="Joshua Zhu" className="about-img" referrerPolicy="no-referrer" />
+                <img src="IMG_2756.jpg" alt="Joshua Zhu" className="about-img" referrerPolicy="no-referrer" />
               </div>
               <div className="figure-caption">Figure 1 — Joshua Zhu at a museum.</div>
             </div>
@@ -303,11 +303,11 @@ export default function App() {
                       <div className="proj-thumb">
                         <div className="proj-n">{proj.id}</div>
                         {proj.id === '01' ? (
-                          <img src="/Proj-Capstone-Thumb.png" alt="Hermes Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                          <img src="Proj-Capstone-Thumb.png" alt="Hermes Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
                         ) : proj.id === '02' ? (
-                          <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                          <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
                         ) : proj.id === '03' ? (
-                          <img src="/Proj-Jellyfish/Proj-Jelly-Thumb.png" alt="Jellyfish Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                          <img src="Proj-Jellyfish/Proj-Jelly-Thumb.png" alt="Jellyfish Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
                         ) : (
                           <svg className="proj-thumb-svg" viewBox="0 0 200 90" fill="none" stroke="#4A2F1A" strokeWidth="1">
                             <path d="M15 45 Q55 28 105 42 Q145 54 185 44" />
@@ -401,7 +401,7 @@ export default function App() {
                 <div className="flex justify-between items-start mb-8">
                   <div className="annot">FIG. 03 — COMPETITION DRONE</div>
                   <div className="flex gap-6 items-center">
-                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <h1 className="project-detail-title">Jellyfish</h1>
@@ -420,7 +420,7 @@ export default function App() {
                       Jellyfish is UBCO Aerospace's student-built drone, designed to compete in the 2025 Aerial Evolution Association of Canada (AEAC) Student UAS Competition. This national competition challenges university teams to design, build, and fly drones capable of supporting wildfire detection and response.
                     </p>
                     <div className="project-image-box">
-                      <img src="/Proj-Jellyfish/Proj-Jelly-Task12026.png" alt="Jellyfish" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Proj-Jellyfish/Proj-Jelly-Task12026.png" alt="Jellyfish" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 1 — Jellyfish: The Club's Wildfire Response Drone.</div>
                     </div>
                   </div>
@@ -538,7 +538,7 @@ export default function App() {
                 <div className="flex justify-between items-start mb-8">
                   <div className="annot">FIG. 02 — AIAA AIR RACER</div>
                   <div className="flex gap-6 items-center">
-                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <h1 className="project-detail-title">Sepehr-Racer 7 (SR-7): Unlimited Class Racer</h1>
@@ -557,7 +557,7 @@ export default function App() {
                       The SR-7 is a clean-sheet aircraft designed to outperform existing race records at the National Championship Air Races. By prioritizing aerodynamic efficiency and "Performance Driven Innovation," the team developed a radical flying-wing configuration that challenges traditional racing aircraft norms.
                     </p>
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[1].jpg" alt="SR-7 Cover" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[1].jpg" alt="SR-7 Cover" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 1 — AIAA Unlimited Class Air Racer Project Cover.</div>
                     </div>
                   </div>
@@ -601,7 +601,7 @@ export default function App() {
                       The SR-7 deviates from conventional layouts by eliminating the fuselage and tail, significantly reducing skin friction and interference drag. To further optimize the profile, the pilot is positioned in a <strong>prone (laying down) position</strong>, similar to the Horten IV glider. This not only reduces the cross-sectional area but also increases the pilot's G-tolerance during high-speed pylon turns.
                     </div>
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Isometric" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Isometric" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 2 — Isometric view of the Sepehr-Racer 7 (SR-7).</div>
                     </div>
                   </div>
@@ -616,7 +616,7 @@ export default function App() {
                       </ul>
                     </div>
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[71].jpg" alt="SR-7 3-Body View" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[71].jpg" alt="SR-7 3-Body View" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 3 — 3-Body view showing internal layout and control surfaces.</div>
                     </div>
                   </div>
@@ -626,15 +626,15 @@ export default function App() {
                   <h2 className="project-section-title">2.3 Conceptual Alternatives</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[17].jpg" alt="Design A" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[17].jpg" alt="Design A" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Design A: Conventional</div>
                     </div>
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[19].jpg" alt="Design B" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[19].jpg" alt="Design B" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Design B: Flying Wing</div>
                     </div>
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[20].jpg" alt="Design C" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[20].jpg" alt="Design C" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Design C: Tandem Pusher-Puller</div>
                     </div>
                   </div>
@@ -692,7 +692,7 @@ export default function App() {
                       Through iterative refinement using carpet plots, we optimized the aircraft for two distinct missions. The tandem engine configuration utilizes two Rolls Royce Griffon 130 engines, providing explosive thrust for the racing mission while maintaining efficient cruise for the ferry mission.
                     </div>
                     <div className="project-image-box">
-                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[28].jpg" alt="Simulated Drag" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[28].jpg" alt="Simulated Drag" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 4 — Simulated Drag Surface Analysis.</div>
                     </div>
                   </div>
@@ -741,9 +741,9 @@ export default function App() {
                 <div className="flex justify-between items-start mb-8">
                   <div className="annot">FIG. 01 — CAPSTONE PROJECT</div>
                   <div className="flex gap-6 items-center">
-                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
-                    <img src="/Proj-Capstone-NSR-1.jpg" alt="North Shore Rescue Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
-                    <img src="/Capstone Logo.png" alt="Capstone Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="Proj-Capstone-NSR-1.jpg" alt="North Shore Rescue Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="Capstone Logo.png" alt="Capstone Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <h1 className="project-detail-title">Hermes: VTOL UAV Signal Relay</h1>
@@ -775,7 +775,7 @@ export default function App() {
                       NSR’s mission requirements are that the vehicle must possess 3 hours of loiter time, and be capable of STOL or VTOL (Short take off and landing, vertical take off and landing) due to the large variation of environment the team operates in. Initial requirements requested the UAV to be backpack portable, however in our third meeting the requirement was changed to allow for a larger wingspan, aircraft length, and mass.
                     </div>
                     <div className="project-image-box">
-                      <img src="/Proj-Capstone-Team2.png" alt="Hermes Capstone Team" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Proj-Capstone-Team2.png" alt="Hermes Capstone Team" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 1 — The Hermes Capstone Team with the final prototype.</div>
                     </div>
                   </div>
@@ -792,11 +792,11 @@ export default function App() {
                   
                   <div className="grid grid-cols-2 gap-4 my-8">
                     <div className="project-image-box">
-                      <img src="/Proj-Capstone-topdown.jpg" alt="Hermes Top Down" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Proj-Capstone-topdown.jpg" alt="Hermes Top Down" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 2 — Top-down view of the hybrid quadplane layout.</div>
                     </div>
                     <div className="project-image-box">
-                      <img src="/Proj-Capstone-battery.jpg" alt="Battery Pack" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Proj-Capstone-battery.jpg" alt="Battery Pack" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 3 — Custom high-capacity battery pack assembly.</div>
                     </div>
                   </div>
@@ -811,18 +811,18 @@ export default function App() {
                       </ul>
                     </div>
                     <div className="project-image-box">
-                      <img src="/Proj-Capstone-batteryIN.jpg" alt="Battery Integration" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="Proj-Capstone-batteryIN.jpg" alt="Battery Integration" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 4 — Battery integration within the fuselage.</div>
                     </div>
                   </div>
 
                   <div className="project-image-box mt-8">
-                    <img src="/Iteration 4 Flight.gif" alt="Iteration 4 Flight Test" className="project-image-full" referrerPolicy="no-referrer" />
+                    <img src="Iteration 4 Flight.gif" alt="Iteration 4 Flight Test" className="project-image-full" referrerPolicy="no-referrer" />
                     <div className="figure-caption">Figure 5 — Iteration 3: Successful vertical flight test.</div>
                   </div>
 
                   <div className="project-image-box mt-8">
-                    <img src="/Proj-Capstone-sideview.png" alt="Hermes Side View" className="project-image-full" referrerPolicy="no-referrer" />
+                    <img src="Proj-Capstone-sideview.png" alt="Hermes Side View" className="project-image-full" referrerPolicy="no-referrer" />
                     <div className="figure-caption">Figure 6 — Side profile view of the Hermes UAV prototype.</div>
                   </div>
                 </section>
