@@ -19,7 +19,7 @@ const PROJECTS = [
     description: 'Designed a clean-sheet "Unlimited Class" air racer for the AIAA competition. Featured a flying-wing configuration with tandem pusher-puller propulsion, a prone pilot position, and optimized supercritical airfoils for Mach 0.8 racing speeds.',
     year: '2025',
     tools: ['SolidWorks', 'XFLR5', 'Aerodynamics'],
-    outcome: 'Conceptual Design Validated',
+    outcome: 'Complete',
     hasDetail: true
   },
   {
@@ -27,9 +27,31 @@ const PROJECTS = [
     category: 'Competition',
     title: 'Jellyfish',
     description: 'UBCO Aerospace\'s student-built drone for the 2025 AEAC Student UAS Competition, designed for wildfire detection and response.',
-    year: '2025',
+    year: '2023-2026',
     tools: ['SolidWorks', 'Carbon Fiber', 'AEAC'],
-    outcome: '2nd Place AEAC',
+    outcome: 'Hardware Flight Test Completed',
+    hasDetail: true
+  },
+/*
+  {
+    id: '04',
+    category: 'Competition',
+    title: 'Orca',
+    description: 'Orca is Canada’s first student design team helicopter, developed for the AEAC competition and awarded second place. Designed to carry dummy passenger payloads, Orca demonstrated strong flight performance with speeds exceeding 80 km/h. Its lightweight carbon fiber layup shell helped improve structural efficiency while supporting the aircraft’s aerodynamic and mission requirements.',
+    year: '2026',
+    tools: ['FEA', 'CAD', '3D printing'],
+    outcome: '2nd place at International competion (AEAC)',
+    hasDetail: false
+  },
+*/
+  {
+    id: '05',
+    category: 'Extra Curricular',
+    title: 'Guardian',
+    description: 'Guardian is a 2-meter wingspan fixed-wing aircraft designed with a canard configuration to improve stability, control, and high stall angle performance. The aircraft was developed with a strong focus on design for manufacturing, ensuring that aerodynamic performance, structural efficiency, and practical fabrication methods were balanced throughout the design process.',
+    year: '2025-2026',
+    tools: ['CFD', 'XFLR5', '3D printing', 'Composite Manufacturing', 'Flight mechanics'],
+    outcome: 'Ongoing Development',
     hasDetail: true
   }
 ];
@@ -100,7 +122,6 @@ export default function App() {
           <a onClick={() => showPage('home')} className={activePage === 'home' ? 'active' : ''}>Home</a>
           <a onClick={() => showPage('about')} className={activePage === 'about' ? 'active' : ''}>About</a>
           <a onClick={() => showPage('projects')} className={activePage === 'projects' ? 'active' : ''}>Projects</a>
-          <a onClick={() => showPage('reflection')} className={activePage === 'reflection' ? 'active' : ''}>Capstone Reflection</a>
         </div>
         <div className="nav-coords">{coords}</div>
       </nav>
@@ -131,7 +152,7 @@ export default function App() {
             </div>
             <div className="hero-right">
               <div className="hero-img-container">
-                <img src="image.jpg" alt="Joshua Zhu" className="hero-img" referrerPolicy="no-referrer" />
+                <img src="/image.jpg" alt="Joshua Zhu" className="hero-img" referrerPolicy="no-referrer" />
               </div>
               <div className="figure-caption">Figure 1 — Joshua Zhu with the Horten IV flying wing.</div>
             </div>
@@ -139,12 +160,19 @@ export default function App() {
 
           <section className="h-section">
             <div className="sec-label">Who I Am</div>
-            <h2 className="sec-title readable-title">Director of the Fixed Wing Division,<br/>Boeing Avionics Research Intern,<br/>AEAC UAV Competition.</h2>
+            <h2 className="sec-title readable-title" style={{ fontWeight: 300 }}>
+              <strong>Director</strong> of Fixed Wing Division,<br/>
+              <strong>Boeing</strong> Avionics Research Intern,<br/>
+              AEAC UAV <strong>Competition</strong>.
+            </h2>
             
             <div className="about-grid">
               <div>
                 <p className="about-p">
-                  I am a Mechanical and Aerospace Engineering student at the University of British Columbia, specializing in aircraft and UAV design. My experience ranges from developing HUD avionics at Boeing Germany to restoring the world's last airworthy Horten IV flying wing with Akaflieg Darmstadt.
+                  I am a Mechanical and Aerospace Engineering student at University of British Columbia, specializing in aircraft and UAV design. My experience ranges from developing HUD avionics at <strong>Boeing</strong> Germany to restoring the world's last airworthy Horten IV flying wing with Akaflieg Darmstadt.
+                </p>
+                <p className="about-p mt-4">
+                  I am deeply passionate about aerodynamics, flight mechanics, CAD, FEA, and mechanical design in general. As <strong>Director</strong> of Fixed Wing at UBCO Aerospace, I lead multidisciplinary teams to push the boundaries of what's possible in the skies.
                 </p>
                 <div className="skills-grid-new !grid-cols-2 !gap-x-8">
                   {SKILLS.slice(0, 4).map((cat) => (
@@ -200,10 +228,10 @@ export default function App() {
             <div className="cross cross-br"></div>
             <div className="annot a-tl">FIG. 01 — BIOGRAPHY</div>
             <div className="ph-eyebrow">// About Me</div>
-            <h1 className="ph-title">
-              Director of the Fixed Wing Division,<br/>
-              Boeing Avionics Research Intern,<br/>
-              AEAC UAV Competition.
+            <h1 className="ph-title" style={{ fontFamily: "'Jost', sans-serif", fontWeight: 300 }}>
+              <strong>Director</strong> of Fixed Wing Division,<br/>
+              <strong>Boeing</strong> Avionics Research Intern,<br/>
+              AEAC UAV <strong>Competition</strong>.
             </h1>
             <div className="ph-bg">JZ</div>
           </div>
@@ -211,12 +239,12 @@ export default function App() {
           <div className="bio-wrap">
             <div className="bio-col">
               <h2 className="bio-heading">Hi, I'm Joshua.</h2>
-              <p className="bio-p">I am a Mechanical and Aerospace Engineering student at the University of British Columbia, specializing in aircraft and UAV design. My experience ranges from developing HUD avionics at Boeing Germany to restoring the world's last airworthy Horten IV flying wing with Akaflieg Darmstadt.</p>
-              <p className="bio-p">I am deeply passionate about CAD, FEA, and the structural subtleties of flight-worthy hardware. As the Director of Fixed Wing at UBCO Aerospace, I lead multidisciplinary teams to push the boundaries of what's possible in the skies.</p>
+              <p className="bio-p">I am a Mechanical and Aerospace Engineering student at University of British Columbia, specializing in aircraft and UAV design. My experience ranges from developing HUD avionics at <strong>Boeing</strong> Germany to restoring the world's last airworthy Horten IV flying wing with Akaflieg Darmstadt.</p>
+              <p className="bio-p">I am deeply passionate about aerodynamics, flight mechanics, CAD, FEA, and mechanical design in general. As <strong>Director</strong> of Fixed Wing at UBCO Aerospace, I lead multidisciplinary teams to push the boundaries of what's possible in the skies.</p>
             </div>
             <div className="bio-col" style={{background:'var(--parchment)',display:'flex',flexDirection:'column',alignItems:'center', padding: '2rem'}}>
               <div className="photo-box" style={{background: 'none', width: 'auto', border: 'none'}}>
-                <img src="IMG_2756.jpg" alt="Joshua Zhu" className="about-img" referrerPolicy="no-referrer" />
+                <img src="/IMG_2756.jpg" alt="Joshua Zhu" className="about-img" referrerPolicy="no-referrer" />
               </div>
               <div className="figure-caption">Figure 1 — Joshua Zhu at a museum.</div>
             </div>
@@ -294,7 +322,7 @@ export default function App() {
           </div>
 
           <div className="proj-list">
-            {['Academia', 'Competition', 'Extra curricular'].map(category => (
+            {['Academia', 'Competition', 'Extra Curricular'].map(category => (
               <div key={category} className="mb-16">
                 <h2 className="font-display text-4xl text-brown mb-8 border-b border-line pb-2">{category}</h2>
                 <div className="space-y-8">
@@ -303,11 +331,13 @@ export default function App() {
                       <div className="proj-thumb">
                         <div className="proj-n">{proj.id}</div>
                         {proj.id === '01' ? (
-                          <img src="Proj-Capstone-Thumb.png" alt="Hermes Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                          <img src="/Proj-Capstone-Thumb.png" alt="Hermes Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
                         ) : proj.id === '02' ? (
-                          <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                          <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
                         ) : proj.id === '03' ? (
-                          <img src="Proj-Jellyfish/Proj-Jelly-Thumb.png" alt="Jellyfish Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                          <img src="/Proj-Jellyfish/Proj-Jelly-Thumb.png" alt="Jellyfish Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
+                        ) : proj.id === '05' ? (
+                          <img src="/Proj-Guard/DSCF1022.png" alt="Guardian Thumbnail" className="w-full h-full object-contain p-4 opacity-80" referrerPolicy="no-referrer" />
                         ) : (
                           <svg className="proj-thumb-svg" viewBox="0 0 200 90" fill="none" stroke="#4A2F1A" strokeWidth="1">
                             <path d="M15 45 Q55 28 105 42 Q145 54 185 44" />
@@ -336,62 +366,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* REFLECTION PAGE */}
-        <div id="reflection" className={`page ${activePage === 'reflection' ? 'active' : ''}`}>
-          <div className="page-hero">
-            <div className="cross cross-tl"></div>
-            <div className="cross cross-br"></div>
-            <div className="annot a-tl">FIG. 01 — RETROSPECTIVE</div>
-            <div className="ph-eyebrow">// Capstone Reflection</div>
-            <h1 className="ph-title">
-              Capstone<br/>
-              <span className="it">Reflection.</span>
-            </h1>
-            <div className="ph-bg">REFL</div>
-          </div>
-
-          <section className="h-section">
-            <div className="sec-label">Executive Summary</div>
-            <h2 className="sec-title">TL;DR</h2>
-            <div className="max-w-4xl">
-              <ul className="list-disc pl-5 space-y-4 text-lg text-ink/80 font-serif leading-relaxed">
-                <li>Entrepreneurial capstone meant the project scope was less predefined, and I had to deal with changing expectations and unclear client assignment early on.</li>
-                <li>I originally expected to build a fixed-wing UAV for payload delivery, so the shift to a VTOL relay aircraft for search and rescue forced me to rethink the project direction.</li>
-                <li>My first instinct was to prioritize aerodynamic performance and design a custom aircraft from scratch using my CAD and aerodynamics experience.</li>
-                <li>As the project progressed, market research, budget limits, and time constraints made it clear that practicality mattered more than pursuing the most optimized design.</li>
-                <li>The team shifted toward a lower-cost, more feasible VTOL solution that better matched the client’s real operational needs.</li>
-                <li>During assembly and testing, we ran into many setbacks, including insufficient lift, ESC issues, battery current limits, weak glue, and airflow interference from the wing layout.</li>
-                <li>These problems taught me the value of iterative design: test, diagnose, redesign, and improve rather than assuming the first solution would work.</li>
-                <li>A major lesson was that good engineering is not just about maximum performance, but about balancing performance, cost, manufacturability, and reliability.</li>
-                <li>I also learned the importance of client-centered design by focusing more on deployment, portability, repairability, and real search-and-rescue conditions.</li>
-                <li>Overall, this project helped me grow in adaptability, communication, troubleshooting, and practical engineering decision-making.</li>
-              </ul>
-            </div>
-          </section>
-
-          <section className="h-section" style={{background:'var(--parchment)'}}>
-            <div className="sec-label">Deep Dive</div>
-            <h2 className="sec-title">Full Reflection</h2>
-            <div className="max-w-4xl space-y-8 text-lg leading-relaxed text-ink/90 font-serif">
-              <p>
-                Unlike a regular capstone project, this capstone project was considered “entrepreneurial,” meaning the topic was student-submitted rather than fully defined beforehand. When I initially undertook the project, I fully expected to build a fixed-wing UAV capable of dropping payloads, so the client’s need for a VTOL relay platform was a major surprise. There was also some miscommunication on the school’s part regarding client assignment, which led us to contact North Shore Rescue ourselves and clarify the real problem directly. That experience taught me early on that engineering projects are not always as clearly scoped as they appear on paper, and that initiative in communication is just as important as technical ability.
-              </p>
-              <p>
-                Because I had built up experience in aerodynamics and CAD through the aerospace club, my initial instinct was to push for the most optimized aerodynamic design possible, which meant creating our own aircraft from the ground up. I worked on early design concepts in XFLR5 using carpet plots and methods from Dr. Raymer’s Aircraft Design: A Conceptual Approach. However, as we continued with market analysis and reviewed our budget and timeline, it became clear that pursuing a fully custom aircraft was not the most practical solution. Instead, we shifted toward a lower-cost VTOL platform that could still meet the client’s needs while remaining feasible to build, test, and iterate within the capstone constraints. That shift in mindset was one of the most important lessons of the project: good engineering is not only about maximizing performance, but about finding the best balance between performance, cost, manufacturability, and reliability. This tradeoff is also reflected in the final design report, which emphasizes cost awareness, feasibility, and field practicality as central design criteria.
-              </p>
-              <p>
-                Throughout assembly and testing, we encountered repeated setbacks. We dealt with ESC issues, insufficient lift, battery current limitations, weak adhesive choices, and eventually airflow interference caused by the wing and motor placement. Rather than treating these problems as failures, we learned to approach them as part of an iterative design cycle. Each issue forced us to diagnose the problem, test a hypothesis, and adjust the system. In particular, discovering that the wings were obstructing the lift motors and redesigning the wing extender so the motors sat below the wings was a turning point in the project, and it reinforced the importance of experimental validation over assumption. The report’s testing section shows how several iterations were required before the aircraft achieved stable hover, which closely reflects the persistence and debugging mindset that this project demanded.
-              </p>
-              <p>
-                Another major takeaway for me was the importance of practicality in client-centered design. At the beginning, I was focused heavily on aerodynamic elegance and building something impressive from a design standpoint. By the end, I had a greater appreciation for designing around the actual operational environment: confined launch areas, modularity, cost of repair, ease of transport, and the realities of volunteer search and rescue work. The final solution may not have been the most aerodynamically ambitious aircraft I could imagine, but it was much closer to something that could realistically serve the client’s needs. That perspective changed how I think about engineering design. A successful product is not necessarily the most advanced one, but the one that solves the right problem in a robust and achievable way. This is consistent with the report’s conclusion that the quadplane VTOL configuration was chosen because it was practical for obstructed terrain, quick deployment, and long-endurance relay work rather than because it was the most theoretically optimized aircraft.
-              </p>
-              <p>
-                Overall, this capstone pushed me to grow not just as a designer, but as an engineer. I had to adapt to changing requirements, communicate directly with stakeholders, make tradeoffs under constraints, and keep moving forward even when the system did not work as expected. It reminded me that real engineering rarely follows the original plan, and that progress often comes from being flexible, analytical, and persistent. If I were to continue this project, I would want to further validate fixed-wing transition performance and improve autonomy features, but even in its current state, the project gave me valuable experience in translating an ambiguous problem into a tested and functional prototype. More importantly, it showed me that engineering is ultimately about responding to real needs with solutions that are thoughtful, practical, and continually improved through iteration.
-              </p>
-            </div>
-          </section>
-        </div>
-
         {/* PROJECT DETAIL OVERLAY: Jellyfish */}
         {selectedProject === '03' && (
           <div className="project-detail-overlay">
@@ -401,7 +375,7 @@ export default function App() {
                 <div className="flex justify-between items-start mb-8">
                   <div className="annot">FIG. 03 — COMPETITION DRONE</div>
                   <div className="flex gap-6 items-center">
-                    <img src="ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <h1 className="project-detail-title">Jellyfish</h1>
@@ -420,7 +394,7 @@ export default function App() {
                       Jellyfish is UBCO Aerospace's student-built drone, designed to compete in the 2025 Aerial Evolution Association of Canada (AEAC) Student UAS Competition. This national competition challenges university teams to design, build, and fly drones capable of supporting wildfire detection and response.
                     </p>
                     <div className="project-image-box">
-                      <img src="Proj-Jellyfish/Proj-Jelly-Task12026.png" alt="Jellyfish" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Proj-Jellyfish/Proj-Jelly-Task12026.png" alt="Jellyfish" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 1 — Jellyfish: The Club's Wildfire Response Drone.</div>
                     </div>
                   </div>
@@ -538,7 +512,7 @@ export default function App() {
                 <div className="flex justify-between items-start mb-8">
                   <div className="annot">FIG. 02 — AIAA AIR RACER</div>
                   <div className="flex gap-6 items-center">
-                    <img src="ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <h1 className="project-detail-title">Sepehr-Racer 7 (SR-7): Unlimited Class Racer</h1>
@@ -557,7 +531,7 @@ export default function App() {
                       The SR-7 is a clean-sheet aircraft designed to outperform existing race records at the National Championship Air Races. By prioritizing aerodynamic efficiency and "Performance Driven Innovation," the team developed a radical flying-wing configuration that challenges traditional racing aircraft norms.
                     </p>
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[1].jpg" alt="SR-7 Cover" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[1].jpg" alt="SR-7 Cover" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 1 — AIAA Unlimited Class Air Racer Project Cover.</div>
                     </div>
                   </div>
@@ -601,7 +575,7 @@ export default function App() {
                       The SR-7 deviates from conventional layouts by eliminating the fuselage and tail, significantly reducing skin friction and interference drag. To further optimize the profile, the pilot is positioned in a <strong>prone (laying down) position</strong>, similar to the Horten IV glider. This not only reduces the cross-sectional area but also increases the pilot's G-tolerance during high-speed pylon turns.
                     </div>
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Isometric" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[70].jpg" alt="SR-7 Isometric" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 2 — Isometric view of the Sepehr-Racer 7 (SR-7).</div>
                     </div>
                   </div>
@@ -616,7 +590,7 @@ export default function App() {
                       </ul>
                     </div>
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[71].jpg" alt="SR-7 3-Body View" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[71].jpg" alt="SR-7 3-Body View" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 3 — 3-Body view showing internal layout and control surfaces.</div>
                     </div>
                   </div>
@@ -626,15 +600,15 @@ export default function App() {
                   <h2 className="project-section-title">2.3 Conceptual Alternatives</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[17].jpg" alt="Design A" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[17].jpg" alt="Design A" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Design A: Conventional</div>
                     </div>
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[19].jpg" alt="Design B" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[19].jpg" alt="Design B" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Design B: Flying Wing</div>
                     </div>
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[20].jpg" alt="Design C" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[20].jpg" alt="Design C" className="project-image-full h-48 object-contain" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Design C: Tandem Pusher-Puller</div>
                     </div>
                   </div>
@@ -692,7 +666,7 @@ export default function App() {
                       Through iterative refinement using carpet plots, we optimized the aircraft for two distinct missions. The tandem engine configuration utilizes two Rolls Royce Griffon 130 engines, providing explosive thrust for the racing mission while maintaining efficient cruise for the ferry mission.
                     </div>
                     <div className="project-image-box">
-                      <img src="Porj-AIAA/ENGR 493 Project phase 4-3 Image[28].jpg" alt="Simulated Drag" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Porj-AIAA/ENGR 493 Project phase 4-3 Image[28].jpg" alt="Simulated Drag" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 4 — Simulated Drag Surface Analysis.</div>
                     </div>
                   </div>
@@ -732,6 +706,157 @@ export default function App() {
           </div>
         )}
 
+        {/* PROJECT DETAIL OVERLAY: Guardian */}
+        {selectedProject === '05' && (
+          <div className="project-detail-overlay">
+            <button className="close-detail" onClick={() => setSelectedProject(null)}>CLOSE [ESC]</button>
+            
+            <div className="project-detail-container">
+              <header className="project-detail-header">
+                <div className="flex justify-between items-start mb-8">
+                  <div className="annot">FIG. 05 — FLIGHT TESTING PROGRAM</div>
+                  <div className="flex gap-6 items-center">
+                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-10 w-auto opacity-80" referrerPolicy="no-referrer" />
+                  </div>
+                </div>
+                <h1 className="project-detail-title">Project Guardian: Canard UAV Platform</h1>
+                <div className="project-detail-meta" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', marginTop: '2.5rem', borderTop: '1px solid var(--line)', paddingTop: '2rem' }}>
+                  <div className="meta-item-box">
+                    <div className="meta-label">ROLE</div>
+                    <div className="meta-val">Director of Fixed Wing</div>
+                  </div>
+                  <div className="meta-item-box">
+                    <div className="meta-label">STATUS</div>
+                    <div className="meta-val">V2 Completed</div>
+                  </div>
+                  <div className="meta-item-box">
+                    <div className="meta-label">SYSTEM</div>
+                    <div className="meta-val">Canard Configuration</div>
+                  </div>
+                  <div className="meta-item-box">
+                    <div className="meta-label">WINGSPAN</div>
+                    <div className="meta-val">2.0 Meters</div>
+                  </div>
+                </div>
+              </header>
+
+              <div className="project-detail-content">
+                <section className="project-section">
+                  <h2 className="project-section-title">0.0 Summary</h2>
+                  <div className="project-grid-2">
+                    <p className="project-text italic border-l-2 border-terracotta pl-6 py-2 bg-parchment/50">
+                      The Guardian is the first fixed wing aircraft designed fully by the fixed wing division from UBCO Aerospace. This aircraft was created with the ultimate goal of enabling the division to compete in international competitions such as SAE, DBF, and other competitions of similar nature.
+                    </p>
+                    <div className="project-image-box">
+                      <img src="/Proj-Guard/IMG_6471.JPG" alt="Guardian Aircraft" className="project-image-full" referrerPolicy="no-referrer" />
+                      <div className="figure-caption">Figure 1 — Guardian: The First In-House Fixed Wing Design.</div>
+                    </div>
+                  </div>
+                </section>
+
+                <section className="project-section">
+                  <h2 className="project-section-title">1.0 Motivation: Why did we build the Guardian?</h2>
+                  <div className="project-text">
+                    The guardian was created with the ultimate goal of enabling the division to compete in international competitions. The aircraft was created with the dual long term intent of training members on aircraft design, manufacturing, flying and for the design to undergo iterative improvement.
+                  </div>
+                  <div className="project-text mt-4">
+                    In the past, the division has had other small and similarly sized aircraft, none of which combined the elements of being fully designed by the entire division, being actively maintained, and being of medium size. 
+                  </div>
+                  <div className="project-image-box mt-8">
+                    <img src="/Proj-Guard/20260205_232458.jpg" alt="Guardian Research" className="project-image-full" referrerPolicy="no-referrer" />
+                    <div className="figure-caption">Figure 2 — Testing and iteration are core to the Guardian program.</div>
+                  </div>
+                  <div className="project-text mt-8">
+                    Having the ability to iteratively improve ultimately allows the aircraft to be a testbed for new electronics, aerodynamics, and manufacturing processes and design. As the time and monetary cost for crashing a competition ready fixed wing is high, having the aircraft as a platform to test higher risk aerodynamics and structural designs is of great benefit.
+                  </div>
+                </section>
+
+                <section className="project-section" style={{background:'var(--parchment)', margin:'4rem -2.5rem', padding:'4rem 2.5rem'}}>
+                  <h2 className="project-section-title">2.0 Design Philosophy: Why the Lifting Canard?</h2>
+                  <div className="project-text">
+                    In 2025, the initial conceptual design for the Guardian was to be a conventional aircraft, similar to the size and weight of another previous design called the Borzoi. However, a point of divergence came when deciding how to mount the propeller.
+                  </div>
+                  <div className="project-image-box my-8">
+                    <img src="/Proj-Guard/image2.png" alt="Design Schematic" className="project-image-full" referrerPolicy="no-referrer" />
+                    <div className="figure-caption">Figure 3 — Canard configuration schematic optimized and verified using CFD. Note the large wake on the rear</div>
+                  </div>
+                  <div className="project-text">
+                    Inspired by 2 real life canard aircraft found in a video game that many fixed wing members played, the <strong>Curtiss XP-55</strong> and the <strong>Kyūshū J7W Shinden</strong>, it was realized that by using a canard design, the rear mounted pusher propeller can be fully protected, regardless of whether the aircraft performs a conventional landing or a hard touchdown.
+                  </div>
+                </section>
+
+                <section className="project-section">
+                  <h2 className="project-section-title">3.0 Specifications and Versions</h2>
+                  
+                  <div className="version-box mb-12 p-8 border border-line bg-white rounded-lg">
+                    <h3 className="text-xl font-bold text-brown mb-4 uppercase tracking-wider">Guardian V1</h3>
+                    <p className="project-text mb-6">
+                      Constructed primarily of hotwired foam boards and carbon fiber rods connected by 3D printed joints. The wings and canards are both made with monkoted foam.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="spec-item p-4 bg-parchment/30 border border-line/20 rounded">
+                          <div className="meta-label !m-0 !mb-1">Wingspan</div>
+                          <div className="text-xl font-medium">2m</div>
+                        </div>
+                        <div className="spec-item p-4 bg-parchment/30 border border-line/20 rounded">
+                          <div className="meta-label !m-0 !mb-1">Weight</div>
+                          <div className="text-xl font-medium">~3.5 kg</div>
+                        </div>
+                        <div className="spec-item p-4 bg-parchment/30 border border-line/20 rounded">
+                          <div className="meta-label !m-0 !mb-1">Stall Angle</div>
+                          <div className="text-xl font-medium">14°</div>
+                        </div>
+                        <div className="spec-item p-4 bg-parchment/30 border border-line/20 rounded">
+                          <div className="meta-label !m-0 !mb-1">Max Cl/Cd</div>
+                          <div className="text-xl font-medium">16</div>
+                        </div>
+                      </div>
+                      <div className="project-image-box">
+                        <img src="/Proj-Guard/IMG_6464.JPG" alt="Guardian V1 Structure" className="project-image-full" referrerPolicy="no-referrer" />
+                        <div className="figure-caption">Figure 4 — Guardian V1: Maiden Flight</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="version-box p-8 border-2 border-terracotta bg-white/40 shadow-sm rounded-lg">
+                    <h3 className="text-xl font-bold text-terracotta mb-4 uppercase tracking-wider">Guardian V2</h3>
+                    <p className="project-text mb-6">
+                      V2 aims to use <strong>stressed skin construction</strong> techniques by replacing the main wings with ribs contained by paper-reinforced foam skin, significantly increasing tensile strength and reliability.
+                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                      <div className="grid grid-cols-2 gap-4 h-fit">
+                        <div className="spec-item p-4 bg-white/50 border border-terracotta/20 rounded">
+                          <div className="meta-label !m-0 !mb-1 text-terracotta">Wingspan</div>
+                          <div className="text-xl font-medium">2m</div>
+                        </div>
+                        <div className="spec-item p-4 bg-white/50 border border-terracotta/20 rounded">
+                          <div className="meta-label !m-0 !mb-1 text-terracotta">Weight</div>
+                          <div className="text-xl font-medium">~3.5 kg</div>
+                        </div>
+                        <div className="spec-item p-4 bg-white/50 border border-terracotta/20 rounded">
+                          <div className="meta-label !m-0 !mb-1 text-terracotta">Stall Angle</div>
+                          <div className="text-xl font-medium">17°</div>
+                        </div>
+                        <div className="spec-item p-4 bg-white/50 border border-terracotta/20 rounded">
+                          <div className="meta-label !m-0 !mb-1 text-terracotta">Stall Speed</div>
+                          <div className="text-xl font-medium">6.3 m/s</div>
+                        </div>
+                      </div>
+                      <div className="project-image-box">
+                        <img src="/Proj-Guard/IMG_6880.jpg" alt="Guardian V2 Final" className="project-image-full" referrerPolicy="no-referrer" />
+                        <div className="figure-caption">Figure 5 — Guardian V2: Final assembly with stressed skin rib-based wings.</div>
+                      </div>
+                    </div>
+                    <p className="mt-6 text-sm text-ink/70 italic">* Completed: February 2026</p>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        )}
+
+
         {/* PROJECT DETAIL OVERLAY: Hermes */}
         {selectedProject === '01' && (
           <div className="project-detail-overlay">
@@ -741,9 +866,9 @@ export default function App() {
                 <div className="flex justify-between items-start mb-8">
                   <div className="annot">FIG. 01 — CAPSTONE PROJECT</div>
                   <div className="flex gap-6 items-center">
-                    <img src="ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
-                    <img src="Proj-Capstone-NSR-1.jpg" alt="North Shore Rescue Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
-                    <img src="Capstone Logo.png" alt="Capstone Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="/ubc-logo-png-transparent.png" alt="UBC Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="/Proj-Capstone-NSR-1.jpg" alt="North Shore Rescue Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
+                    <img src="/Capstone Logo.png" alt="Capstone Logo" className="h-12 w-auto opacity-80" referrerPolicy="no-referrer" />
                   </div>
                 </div>
                 <h1 className="project-detail-title">Hermes: VTOL UAV Signal Relay</h1>
@@ -775,7 +900,7 @@ export default function App() {
                       NSR’s mission requirements are that the vehicle must possess 3 hours of loiter time, and be capable of STOL or VTOL (Short take off and landing, vertical take off and landing) due to the large variation of environment the team operates in. Initial requirements requested the UAV to be backpack portable, however in our third meeting the requirement was changed to allow for a larger wingspan, aircraft length, and mass.
                     </div>
                     <div className="project-image-box">
-                      <img src="Proj-Capstone-Team2.png" alt="Hermes Capstone Team" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Proj-Capstone-Team2.png" alt="Hermes Capstone Team" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 1 — The Hermes Capstone Team with the final prototype.</div>
                     </div>
                   </div>
@@ -792,11 +917,11 @@ export default function App() {
                   
                   <div className="grid grid-cols-2 gap-4 my-8">
                     <div className="project-image-box">
-                      <img src="Proj-Capstone-topdown.jpg" alt="Hermes Top Down" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Proj-Capstone-topdown.jpg" alt="Hermes Top Down" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 2 — Top-down view of the hybrid quadplane layout.</div>
                     </div>
                     <div className="project-image-box">
-                      <img src="Proj-Capstone-battery.jpg" alt="Battery Pack" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Proj-Capstone-battery.jpg" alt="Battery Pack" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 3 — Custom high-capacity battery pack assembly.</div>
                     </div>
                   </div>
@@ -811,18 +936,18 @@ export default function App() {
                       </ul>
                     </div>
                     <div className="project-image-box">
-                      <img src="Proj-Capstone-batteryIN.jpg" alt="Battery Integration" className="project-image-full" referrerPolicy="no-referrer" />
+                      <img src="/Proj-Capstone-batteryIN.jpg" alt="Battery Integration" className="project-image-full" referrerPolicy="no-referrer" />
                       <div className="figure-caption">Figure 4 — Battery integration within the fuselage.</div>
                     </div>
                   </div>
 
                   <div className="project-image-box mt-8">
-                    <img src="Iteration 4 Flight.gif" alt="Iteration 4 Flight Test" className="project-image-full" referrerPolicy="no-referrer" />
+                    <img src="/Iteration 4 Flight.gif" alt="Iteration 4 Flight Test" className="project-image-full" referrerPolicy="no-referrer" />
                     <div className="figure-caption">Figure 5 — Iteration 3: Successful vertical flight test.</div>
                   </div>
 
                   <div className="project-image-box mt-8">
-                    <img src="Proj-Capstone-sideview.png" alt="Hermes Side View" className="project-image-full" referrerPolicy="no-referrer" />
+                    <img src="/Proj-Capstone-sideview.png" alt="Hermes Side View" className="project-image-full" referrerPolicy="no-referrer" />
                     <div className="figure-caption">Figure 6 — Side profile view of the Hermes UAV prototype.</div>
                   </div>
                 </section>

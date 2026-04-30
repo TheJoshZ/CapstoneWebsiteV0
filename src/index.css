@@ -395,7 +395,7 @@ nav {
 /* ================== PROJECTS ================== */
 #projects{background:var(--cream);}
 
-.proj-list{padding:0 3.5rem 4rem;}
+.proj-list{padding:6rem 3.5rem 4rem;}
 .proj-card{display:grid;grid-template-columns:260px 1fr;border:1px solid var(--line);margin-top:2rem;background:var(--cream);transition:box-shadow .2s;position:relative;overflow:hidden;}
 .proj-card:hover{box-shadow:4px 4px 0 var(--sand);}
 
@@ -465,6 +465,21 @@ nav {
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.meta-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 0.5rem;
+}
+
+.meta-val {
+  font-size: 0.9rem;
+  color: var(--brown);
+  font-weight: 400;
 }
 
 .project-detail-content {
