@@ -126,7 +126,7 @@ export default function App() {
         <div className="nav-coords">{coords}</div>
       </nav>
 
-      <main className="flex-grow">
+      <main className="grow">
         {/* HOME PAGE */}
         <div id="home" className={`page ${activePage === 'home' ? 'active' : ''}`}>
           <div className="ruler-top"></div>
@@ -777,7 +777,7 @@ export default function App() {
                     In 2025, the initial conceptual design for the Guardian was to be a conventional aircraft, similar to the size and weight of another previous design called the Borzoi. However, a point of divergence came when deciding how to mount the propeller.
                   </div>
                   <div className="project-image-box my-8">
-                    <img src="Proj-Guard/image2.png" alt="Design Schematic" className="project-image-full" referrerPolicy="no-referrer" />
+                    <img src="Proj-Guard/IMG_6533.jpg" alt="Design Schematic" className="project-image-full" referrerPolicy="no-referrer" />
                     <div className="figure-caption">Figure 3 — Canard configuration schematic optimized and verified using CFD. Note the large wake on the rear</div>
                   </div>
                   <div className="project-text">
